@@ -1,0 +1,51 @@
+' Gambas class file
+
+Public Function CelsiusToFahrenheit(celsius As Float) As Float
+
+  Return Round((celsius * 1.8) + 32, -2)
+
+End
+
+Public Function FahrenheitToCelsius(fahrenheit As Float) As Float
+
+  Return Round((fahrenheit - 32) / 1.8, -2)
+
+End
+
+Public bIgnoreEvents As Boolean
+
+Public Sub VBCelsius_Change()
+
+  If bIgnoreEvents Then Return
+
+  Dim celsius As Float
+  Dim fahrenheit As Float
+
+  If Not IsNumber(VBCelsius.Text) Or Trim(VBCelsius.Text) = "" Then Return
+  celsius = Val(VBCelsius.Text)
+
+  fahrenheit = CelsiusToFahrenheit(celsius)
+
+  bIgnoreEvents = True
+  VBFahrenheit.Text = Format(fahrenheit, "0.00")
+  bIgnoreEvents = False
+
+End
+
+Public Sub VBFahrenheit_Change()
+
+  If bIgnoreEvents Then Return
+
+  Dim celsius As Float
+  Dim fahrenheit As Float
+
+  If Not IsNumber(VBFahrenheit.Text) Or Trim(VBFahrenheit.Text) = "" Then Return
+  fahrenheit = Val(VBFahrenheit.Text)
+
+  celsius = FahrenheitToCelsius(fahrenheit)
+
+  bIgnoreEvents = True
+  VBCelsius.Text = Format(celsius, "0.00")
+  bIgnoreEvents = False
+
+End

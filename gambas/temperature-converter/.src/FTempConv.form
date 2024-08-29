@@ -1,0 +1,22 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,50,7)
+  Text = ("Temperature Converter")
+  { VBCelsius ValueBox
+    MoveScaled(2,2,13,4)
+    Alignment = Align.Right
+  }
+  { VBFahrenheit ValueBox
+    MoveScaled(25,2,13,4)
+    Alignment = Align.Right
+  }
+  { Label1 Label
+    MoveScaled(16,2,8,4)
+    Text = ("Celsius =")
+  }
+  { Label2 Label
+    MoveScaled(39,2,10,4)
+    Text = ("Fahrenheit")
+  }
+}
