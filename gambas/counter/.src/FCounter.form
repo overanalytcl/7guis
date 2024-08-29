@@ -1,0 +1,18 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,33,8)
+  Text = ("Counter")
+  Resizable = False
+  TakeFocus = False
+  { BtnCount Button
+    MoveScaled(15,2,16,4)
+    Text = ("Count")
+  }
+  { LblCount Label
+    MoveScaled(2,2,12,4)
+    Alignment = Align.Right
+    Border = Border.Plain
+    Text = ("0")
+  }
+}

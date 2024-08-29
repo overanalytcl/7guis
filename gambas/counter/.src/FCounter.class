@@ -1,0 +1,11 @@
+' Gambas class file
+
+Public Sub BtnCount_Click()
+
+  Dim currentCount As Integer
+
+  currentCount = Val(LblCount.Text)
+  currentCount += 1
+  LblCount.Text = Str(currentCount)
+
+End
